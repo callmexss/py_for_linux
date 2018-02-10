@@ -2,8 +2,10 @@
 
 ## small tools
 ### http server
-`python -m SimpleHTTPServer # for python 2`  
-`python -m http.server # for python 3`
+```sh
+python -m SimpleHTTPServer # for python 2
+python -m http.server # for python 3
+```
 
 ### string2json
 `json style string | python -m json.tool`
