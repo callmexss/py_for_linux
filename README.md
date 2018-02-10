@@ -85,7 +85,7 @@ save and exit. than `python test.py` and it will start debug at breakpoint
 
 ## python coding standard
 ### for check: pycodestyle(pep8)
-install: // 
+install:   
 `pip install pycodestyle` 
 
 usage: 
