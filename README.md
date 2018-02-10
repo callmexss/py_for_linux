@@ -14,6 +14,13 @@ git remote add origin git@github.com:Username/Your_Repo_Name.git
 git branch --set-upstream-to=origin/master master
 ```
 
+# Chapter 1
+## why python?
+Life is short, use python!
+
+## py2 or py3
+BOTH. IT'S NOT SO HARD TO WRITE CODE BOTH WORK UNDER THE VERSION 2 AND 3. 
+
 
 # Chapter 2
 
@@ -79,12 +86,16 @@ save and exit. than `python test.py` and it will start debug at breakpoint
 ## python coding standard
 ### for check: pycodestyle(pep8)
 install:
-`pip install pycodestyle`
+`pip install pycodestyle` 
+
 usage: 
 `pycodestyle *.py`
+
 optional arguments:
+```
 --first: show check information
 --show-source --show-pep8: with the informal parts print
+```
 
 ### for modify: autopep8
 install:
