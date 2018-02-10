@@ -52,7 +52,7 @@ pip download package_name --trusted-host mirrors.aliyun.com
 ```
 
 ## python Editor
-vim of course
+vim of course   
 some plugs:
 1. snipmate
 2. syntastic
@@ -67,12 +67,14 @@ interactive ways:
   `jupyter notebook --no-browsere --ip=0.0.0.0 --allow-root`
 
 ## python debug tools
-pdb and ipdb
+pdb and ipdb   
 usage:
 ```sh
 python -m pdb test_pdb.py
 ```
+
 or 
+
 ```python
 # filename: test.py
 improt pdb
@@ -85,11 +87,16 @@ save and exit. than `python test.py` and it will start debug at breakpoint
 
 ## python coding standard
 ### for check: pycodestyle(pep8)
-install:   
-`pip install pycodestyle` 
 
-usage: 
-`pycodestyle *.py`
+install:   
+```sh
+pip install pycodestyle
+``` 
+
+usage:   
+```
+pycodestyle *.py
+```
 
 optional arguments:
 ```
@@ -99,16 +106,24 @@ optional arguments:
 
 ### for modify: autopep8
 install:
-`pip install autopep8`
+```sh 
+pip install autopep8
+```
+
 usage:
-`autopep8 *.py # print the modification without change the original file`
+```sh 
+autopep8 *.py # print the modification without change the original file
+```
+
 optional:
+```sh
 --in-place: equals `-i` modify in the original file
+```
 
 ## python workplace management
 ### pyenv: manage different kinds of python interpretation
-install(from github):
-TODO: 
+install(from github):   
+TODO:    
 
 usage:
 ```sh
@@ -121,22 +136,26 @@ pyenv uninstall version_num # uninstall specific version of python
 ```
 
 ### virtualenv: manage different workplace of python
-TODO:
+TODO:   
 
 ---
 # Chapter 3
 
 ## pertain command line python features
 ### sys
+```
 sys.argv: the arguments list
 sys.stdin: standard input stream
 sys.stdout: standard ouput stream
 sys.stderr: standard error stream
+```
 ### fileinput
 fileinput.input(): input from a specific file
 ### getpass
+```
 getpass.getuser(): get username
 getpass.getpass(): get password
+```
 
 ## parse config files
 ```python
@@ -155,7 +174,4 @@ import argparse
 
 parser = argparse.ArgumentParser()
 ```
-
-
-
 
