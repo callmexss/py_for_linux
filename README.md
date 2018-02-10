@@ -1,3 +1,13 @@
+# Chapter 0
+## use ssh connection to github
+```sh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# start the ssh-agent in the background
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+```
+
+
 # Chapter 2
 
 ## small tools
