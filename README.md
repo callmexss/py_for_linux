@@ -1,10 +1,17 @@
 # Chapter 0
-## use ssh connection to github
+## [use ssh connection to github](https://help.github.com/articles/connecting-to-github-with-ssh/)
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # start the ssh-agent in the background
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
+```
+If still need to input the username and password:
+from [SF](https://segmentfault.com/q/1010000000599327)
+```sh
+git remote remove origin
+git remote add origin git@github.com:Username/Your_Repo_Name.git
+git branch --set-upstream-to=origin/master master
 ```
 
 
