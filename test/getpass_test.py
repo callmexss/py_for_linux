@@ -1,6 +1,6 @@
 from __future__ import print_function
-import getpass
 
+import getpass
 
 user = getpass.getuser()
 passwd = getpass.getpass("your password: ")

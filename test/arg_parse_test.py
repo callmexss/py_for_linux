@@ -1,4 +1,15 @@
+#!/usr/bin/python2
+# -*- coding: utf-8 -*-
+"""""""""""""""""""""""""""""""""""""""""""""""
+"      Filename: arg_parse_test.py
+"
+"        Author: xss - callmexss@126.com
+"   Description: A simple try for argparse
+"        Create: 2018-02-11 00:26:42
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 from __future__ import print_function
+
 import argparse
 
 

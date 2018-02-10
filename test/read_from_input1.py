@@ -1,6 +1,6 @@
 from __future__ import print_function
-import fileinput
 
+import fileinput
 
 for line in fileinput.input():
     # meta = [fileinput.filename(), fileinput.fileno(),
