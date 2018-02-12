@@ -13,6 +13,29 @@ git remote remove origin
 git remote add origin git@github.com:Username/Your_Repo_Name.git
 git branch --set-upstream-to=origin/master master
 ```
+## vim open and edit more than one file
+```sh
+# from terminal
+vim file1 file2 file3 ...
+
+# from vim
+:o filename
+
+# show many files
+:split
+:vsplit
+
+# handle different files
+ctrl + 6 # next file
+:bn # next
+:bp # last 
+
+ctrl + w + up/down/left/right
+ctrl + w + j/k/h/l # same as last one
+ctrl + ww # next
+
+```
+
 
 # Chapter 1
 ## why python?

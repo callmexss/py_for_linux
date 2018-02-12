@@ -1,5 +1,8 @@
 #!/usr/bin/python2
 # -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
 """""""""""""""""""""""""""""""""""""""""""""""
 "      Filename: arg_parse_test.py
 "
@@ -8,7 +11,6 @@
 "        Create: 2018-02-11 00:26:42
 """""""""""""""""""""""""""""""""""""""""""""""
 
-from __future__ import print_function
 
 import argparse
 
