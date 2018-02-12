@@ -83,11 +83,15 @@ some plugs:
   pip install jedi
 
 interactive ways:
-1. ipython
-  magic method: start with %
-  eg. %lsmagic
-2. notebook
-  `jupyter notebook --no-browsere --ip=0.0.0.0 --allow-root`
+1. ipython   
+```sh
+  # magic method: start with %  
+  %lsmagic # show all the magic method
+```
+2. notebook 
+```sh 
+  jupyter notebook --no-browsere --ip=0.0.0.0 --allow-root
+```
 
 ## python debug tools
 pdb and ipdb   
