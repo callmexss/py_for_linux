@@ -1,4 +1,5 @@
 # Chapter 0
+
 ## [use ssh connection to github](https://help.github.com/articles/connecting-to-github-with-ssh/)
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -13,6 +14,7 @@ git remote remove origin
 git remote add origin git@github.com:Username/Your_Repo_Name.git
 git branch --set-upstream-to=origin/master master
 ```
+
 ## vim open and edit more than one file
 ```sh
 # from terminal
@@ -38,6 +40,7 @@ ctrl + ww # next
 
 
 # Chapter 1
+
 ## why python?
 Life is short, use python!
 
@@ -48,6 +51,7 @@ BOTH. IT'S NOT SO HARD TO WRITE CODE BOTH WORK UNDER THE VERSION 2 AND 3.
 # Chapter 2
 
 ## small tools
+
 ### http server
 ```sh
 python -m SimpleHTTPServer # for python 2
@@ -61,6 +65,7 @@ python -m http.server # for python 3
 `python -c "import paramiko"`
 
 ## pip
+
 ### change pip source
 vim pip.conf
 ```
@@ -80,7 +85,9 @@ some plugs:
 1. snipmate
 2. syntastic
 3. jedi-vim
-  pip install jedi
+```sh
+pip install jedi
+```
 
 interactive ways:
 1. ipython   
@@ -90,7 +97,7 @@ interactive ways:
 ```
 2. notebook 
 ```sh 
-  jupyter notebook --no-browsere --ip=0.0.0.0 --allow-root
+  jupyter notebook --no-browser --ip=0.0.0.0 --allow-root
 ```
 
 ## python debug tools
@@ -113,6 +120,7 @@ pdb.set_trace()
 save and exit. than `python test.py` and it will start debug at breakpoint
 
 ## python coding standard
+
 ### for check: pycodestyle(pep8)
 
 install:   
@@ -148,6 +156,7 @@ optional:
 ```
 
 ## python workplace management
+
 ### pyenv: manage different kinds of python interpretation
 install(from github):   
 TODO:    
@@ -169,6 +178,7 @@ TODO:
 # Chapter 3
 
 ## pertain command line python features
+
 ### sys
 ```
 sys.argv: the arguments list
@@ -178,6 +188,7 @@ sys.stderr: standard error stream
 ```
 ### fileinput
 fileinput.input(): input from a specific file
+
 ### getpass
 ```
 getpass.getuser(): get username
@@ -196,9 +207,45 @@ cf.read("my.cnf")
 
 ## parse command line arguments
 ```python
+from __future__ import print_function
 import argparse
 
 
-parser = argparse.ArgumentParser()
+def _argparse():
+    parser = argparse.ArgumentParser(description="This is a description")
+    parser.add_argument('--host', action='store',
+                        dest='server', default='localhost', help='connect to host')
+    parser.add_argument('-t', action='store_true',
+                        default=False, dest='boolean_switch', help='Set a switch to true')
+    return parser.parse_args()
+
+
+def main():
+    parser = _argparse()
+    print(parser)
+    print('host =', parser.server)
+    print('boolean_switch =', parser.boolean_switch)
+
+
+if __name__ == '__main__':
+    main()
 ```
 
+## use click to parse command line argument
+```python
+import click
+
+
+@click.command()
+@click.option('--count', default=1, help='Number of greetings.')
+@click.option('--name', prompt='your name',
+              help='The person to greet.')
+def hello(count, name):
+    '''Simple program that greets NAME for a total of COUNT times.'''
+    for x in range(count):
+        click.echo('Hello {}!'.format(name))
+
+
+if __name__ == '__main__':
+    hello()
+```
