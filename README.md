@@ -67,10 +67,18 @@ python -m http.server # for python 3
 ## pip
 
 ### change pip source
+for linux
+```sh
+cd ~ && mkdir .pip
 vim pip.conf
+# content
+# [global]
+# index-url = https://pypi.douban.com/simple/
 ```
-[global]
-index-url = https://pypi.douban.com/simple/
+for windows
+```sh
+# path is %APPDATA%\pip\pip.ini
+# content is same to before
 ```
 
 ### download package and deploy locally
