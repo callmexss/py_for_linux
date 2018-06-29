@@ -77,7 +77,7 @@ vim pip.conf
 ```
 for windows
 ```sh
-# path is %APPDATA%\pip\pip.ini
+# path is %APPDATAas pip\pip.ini
 # content is same to before
 ```
 
@@ -86,6 +86,19 @@ for windows
 # new method, the old '--download' way will be deprecated in the future
 pip download package_name --trusted-host mirrors.aliyun.com
 ```
+
+### pipenv
+> Pipenv is a dependency manager for Python projects. 
+
+Use `pip` to install Pipenv:
+```sh
+pip install --user pipenv
+
+# installing packages for your project
+cd myproject
+pipenv install requests
+``` 
+
 
 ## python Editor
 vim of course   
