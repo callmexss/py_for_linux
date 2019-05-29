@@ -1,0 +1,15 @@
+---
+- hosts: deploy
+  tasks:
+  - name: copy file
+    copy: src=./freenet.tar dest=/tmp/freenet.tar
+
+  - name: change mode
+    file: dest=/tmp/freenet.tar mode=700 owner=tester group=tester
+
+  - name: ensure packages installed
+    apt: pkg={{ item }} state=present
+    with_items:
+      - tmux
+      - git
+      - openjdk-9-jre
