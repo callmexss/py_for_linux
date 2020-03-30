@@ -77,7 +77,7 @@ vim pip.conf
 ```
 for windows
 ```sh
-# path is %APPDATAas pip\pip.ini
+# path is %APPDATA as pip\pip.ini
 # content is same to before
 ```
 
